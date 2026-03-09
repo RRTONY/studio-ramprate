@@ -10,7 +10,50 @@ export default defineConfig({
   projectId: 'xdo1fb5d',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({
+      structure: (S) =>
+        S.list()
+          .title('Content')
+          .items([
+            S.listItem()
+              .title('Pages')
+              .schemaType('page')
+              .child(S.documentTypeList('page').title('Pages')),
+            S.divider(),
+            S.listItem()
+              .title('Blog')
+              .child(
+                S.list()
+                  .title('Blog')
+                  .items([
+                    S.listItem()
+                      .title('Posts')
+                      .schemaType('post')
+                      .child(S.documentTypeList('post').title('Posts')),
+                    S.listItem()
+                      .title('Categories')
+                      .schemaType('category')
+                      .child(S.documentTypeList('category').title('Categories')),
+                  ]),
+              ),
+            S.divider(),
+            S.listItem()
+              .title('Team Members')
+              .schemaType('teamMember')
+              .child(S.documentTypeList('teamMember').title('Team Members')),
+            S.listItem()
+              .title('Client Logos')
+              .schemaType('clientLogo')
+              .child(S.documentTypeList('clientLogo').title('Client Logos')),
+            S.divider(),
+            S.listItem()
+              .title('Site Settings')
+              .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
+          ]),
+    }),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,
