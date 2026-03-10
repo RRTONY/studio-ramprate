@@ -6,6 +6,7 @@ import category from './category'
 import teamMember from './teamMember'
 import clientLogo from './clientLogo'
 import siteSettings from './siteSettings'
+import testimonial from './testimonial'
 import hero from './objects/hero'
 import servicePillars from './objects/servicePillars'
 import logoBar from './objects/logoBar'
@@ -15,6 +16,7 @@ import teamGrid from './objects/teamGrid'
 import blogLatest from './objects/blogLatest'
 import impactSection from './objects/impactSection'
 import contactForm from './objects/contactForm'
+import testimonialGrid from './objects/testimonialGrid'
 
 export const schemaTypes = [
   // Document types
@@ -24,6 +26,7 @@ export const schemaTypes = [
   teamMember,
   clientLogo,
   siteSettings,
+  testimonial,
   // Object types
   blockContent,
   seo,
@@ -36,4 +39,5 @@ export const schemaTypes = [
   blogLatest,
   impactSection,
   contactForm,
+  testimonialGrid,
 ]

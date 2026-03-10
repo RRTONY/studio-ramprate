@@ -32,6 +32,7 @@ export default defineType({
         {type: 'blogLatest'},
         {type: 'impactSection'},
         {type: 'contactForm'},
+        {type: 'testimonialGrid'},
       ],
     }),
     defineField({

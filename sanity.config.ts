@@ -46,6 +46,10 @@ export default defineConfig({
               .title('Client Logos')
               .schemaType('clientLogo')
               .child(S.documentTypeList('clientLogo').title('Client Logos')),
+            S.listItem()
+              .title('Testimonials')
+              .schemaType('testimonial')
+              .child(S.documentTypeList('testimonial').title('Testimonials')),
             S.divider(),
             S.listItem()
               .title('Site Settings')
