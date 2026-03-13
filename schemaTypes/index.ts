@@ -17,6 +17,9 @@ import blogLatest from './objects/blogLatest'
 import impactSection from './objects/impactSection'
 import contactForm from './objects/contactForm'
 import testimonialGrid from './objects/testimonialGrid'
+import boardAdvisor from './boardAdvisor'
+import caseStudy from './caseStudy'
+import confidentialTestimonial from './confidentialTestimonial'
 
 export const schemaTypes = [
   // Document types
@@ -27,6 +30,9 @@ export const schemaTypes = [
   clientLogo,
   siteSettings,
   testimonial,
+  boardAdvisor,
+  caseStudy,
+  confidentialTestimonial,
   // Object types
   blockContent,
   seo,

@@ -100,6 +100,24 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'companyValues',
+      title: 'Company Values',
+      type: 'array',
+      of: [{type: 'string'}],
+    }),
+    defineField({
+      name: 'timeline',
+      title: 'Company Timeline',
+      type: 'array',
+      of: [{type: 'object', fields: [{name: 'year', title: 'Year', type: 'string'}, {name: 'event', title: 'Event', type: 'string'}], preview: {select: {title: 'year', subtitle: 'event'}}}],
+    }),
+    defineField({
+      name: 'corporateFacts',
+      title: 'Corporate Facts',
+      type: 'array',
+      of: [{type: 'object', fields: [{name: 'label', title: 'Label', type: 'string'}, {name: 'value', title: 'Value', type: 'string'}], preview: {select: {title: 'label', subtitle: 'value'}}}],
+    }),
+        defineField({
       name: 'googleAnalyticsId',
       title: 'Google Analytics ID',
       type: 'string',

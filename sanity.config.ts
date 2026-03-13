@@ -50,6 +50,18 @@ export default defineConfig({
               .title('Testimonials')
               .schemaType('testimonial')
               .child(S.documentTypeList('testimonial').title('Testimonials')),
+            S.listItem()
+              .title('Confidential Testimonials')
+              .schemaType('confidentialTestimonial')
+              .child(S.documentTypeList('confidentialTestimonial').title('Confidential Testimonials')),
+            S.listItem()
+              .title('Board Advisors')
+              .schemaType('boardAdvisor')
+              .child(S.documentTypeList('boardAdvisor').title('Board Advisors')),
+            S.listItem()
+              .title('Case Studies')
+              .schemaType('caseStudy')
+              .child(S.documentTypeList('caseStudy').title('Case Studies')),
             S.divider(),
             S.listItem()
               .title('Site Settings')
