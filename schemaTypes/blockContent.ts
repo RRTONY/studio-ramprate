@@ -69,12 +69,31 @@ export default defineType({
           name: 'alt',
           type: 'string',
           title: 'Alternative text',
-          validation: (rule) => rule.required(),
         },
         {
           name: 'caption',
           type: 'string',
           title: 'Caption',
+        },
+        {
+          name: 'alignment',
+          type: 'string',
+          title: 'Alignment',
+          options: {
+            list: [
+              {title: 'Left (float)', value: 'alignleft'},
+              {title: 'Right (float)', value: 'alignright'},
+              {title: 'Center', value: 'aligncenter'},
+              {title: 'Full width', value: 'alignnone'},
+            ],
+            layout: 'radio',
+          },
+          initialValue: 'alignnone',
+        },
+        {
+          name: 'width',
+          type: 'number',
+          title: 'Width (px, leave blank for full width)',
         },
       ],
     }),
